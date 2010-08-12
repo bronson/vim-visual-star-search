@@ -7,3 +7,9 @@ Vim's default behavior is to just extend the visual selection to the next
 word that matches the word under the cursor.  Doesn't seem very useful.
 
 from http://got-ravings.blogspot.com/2008/07/vim-pr0n-visual-search-mappings.html
+
+
+TODO: just ran across http://github.com/thinca/vim-visualstar
+Looks like it uses a lot more code to do pretty much the same thing.
+Is it better?
+
