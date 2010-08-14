@@ -11,6 +11,7 @@ endfunction
 vmap * :<C-u>call <SID>VSetSearch()<CR>//<CR>
 vmap # :<C-u>call <SID>VSetSearch()<CR>??<CR>
 
-" recursively vimgrep if you hit leader-star
-nmap <leader>* :execute "noautocmd grep -rw " . expand("<cword>") . " ."<CR>
-vmap <leader>* :<C-u>call <SID>VSetSearch()<CR>:execute "noautocmd vimgrep /" . @/ . "/ **"<CR>
+" recursively vimgrep for word under cursor or selection if you hit leader-star
+nmap <leader>* :execute 'noautocmd vimgrep /\V' . substitute(escape(expand("<cword>"), '\'), '\n', '\\n', 'g') . '/ **'<CR>
+vmap <leader>* :<C-u>call <SID>VSetSearch()<CR>:execute 'noautocmd vimgrep /' . @/ . '/ **'<CR>
+
