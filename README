@@ -9,7 +9,11 @@ word that matches the word under the cursor.  Doesn't seem very useful.
 from http://got-ravings.blogspot.com/2008/07/vim-pr0n-visual-search-mappings.html
 
 
-TODO: just ran across http://github.com/thinca/vim-visualstar
+ALTERNATIVES
+
+Just found visualstar: http://github.com/thinca/vim-visualstar
 Looks like it uses a lot more code to do pretty much the same thing.
 Is it better?
 
+Also, godlygeek has this file: http://github.com/godlygeek/vim-files/blob/master/plugin/vsearch.vim
+It's not an individually-installable plugin but it looks like it came from the same spot.
