@@ -3,11 +3,13 @@ and # to search for it elsewhere in the file.  For example, hit V, select
 a strange sequence of characters like "$! $!", and hit star.  You'll find
 all other runs of "$! $!" in the file.
 
-If you hit <leader>* ("\*" unless you changed the mapleader), vim will
-recursively vimgrep for the word under the cursor or the visual selection.
-
 Vim's default behavior is to just extend the visual selection to the next
 word that matches the word under the cursor.  Doesn't seem very useful.
+
+Also, if you hit <leader>* ("\*" unless you changed the mapleader), vim will
+recursively vimgrep for the word under the cursor or the visual selection.
+If you have already mapped <leader>* then we won't override it.  This is
+useful to set up your own binding to search with, say, Ag instead of vimgrep.
 
 from http://got-ravings.blogspot.com/2008/07/vim-pr0n-visual-search-mappings.html
 
