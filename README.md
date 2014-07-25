@@ -26,8 +26,8 @@ to your .vimrc.
 
 ### History
 
-This plugin was originally derived from
-http://got-ravings.blogspot.com/2008/07/vim-pr0n-visual-search-mappings.html
+It was originally derived from
+[a post on Scrooloose's Blog](http://got-ravings.blogspot.com/2008/07/vim-pr0n-visual-search-mappings.html).
 
 
 ### Alternatives
