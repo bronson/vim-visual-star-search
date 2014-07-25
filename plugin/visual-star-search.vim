@@ -1,10 +1,17 @@
 " From http://got-ravings.blogspot.com/2008/07/vim-pr0n-visual-search-mappings.html
 
 " makes * and # work on visual mode too.  global function so user mappings can call it.
-function! VisualStarSearchSet(cmdtype)
+" specifying 'raw' for the second argument prevents escaping the result for vimgrep
+function! VisualStarSearchSet(cmdtype,...)
   let temp = @s
   norm! gv"sy
-  let @/ = '\V' . substitute(escape(@s, a:cmdtype.'\'), '\n', '\\n', 'g')
+  if !a:0 || a:1 != 'raw'
+    let @s = escape(@s, a:cmdtype.'\')
+  endif
+  let @/ = substitute(@s, '\n', '\\n', 'g')
+  if !a:0 || a:1 != 'raw'
+    let @s = '\V' . @s
+  endif
   let @s = temp
 endfunction
 
