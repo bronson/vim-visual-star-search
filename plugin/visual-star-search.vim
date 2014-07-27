@@ -2,11 +2,13 @@
 
 " makes * and # work on visual mode too.  global function so user mappings can call it.
 " specifying 'raw' for the second argument prevents escaping the result for vimgrep
+" TODO: there's a bug with raw mode.  since we're using @/ to return an unescaped
+" search string, vim's search highlight will be wrong.  Refactor plz.
 function! VisualStarSearchSet(cmdtype,...)
   let temp = @s
   norm! gv"sy
   if !a:0 || a:1 != 'raw'
-    let @s = escape(@s, a:cmdtype.'\')
+    let @s = escape(@s, a:cmdtype.'\*')
   endif
   let @/ = substitute(@s, '\n', '\\n', 'g')
   if !a:0 || a:1 != 'raw'
