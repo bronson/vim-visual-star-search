@@ -35,4 +35,4 @@ It was originally derived from
 * [visualstar](http://github.com/thinca/vim-visualstar)
 * [vsearch](http://github.com/godlygeek/vim-files/blob/master/plugin/vsearch.vim)
   -- Godlygeek's file probably came from the same source and is looking great.
-* [nelstrom's fork](https://github.com/nelstrom/vim-visual-star-search) of this script.  Might be better, might not.
+* [nelstrom's fork](https://github.com/nelstrom/vim-visual-star-search) made some excellent changes.  As of Oct 2014, they've been incorporated into this script.
