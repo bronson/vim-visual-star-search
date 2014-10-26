@@ -11,9 +11,6 @@ function! VisualStarSearchSet(cmdtype,...)
     let @s = escape(@s, a:cmdtype.'\*')
   endif
   let @/ = substitute(@s, '\n', '\\n', 'g')
-  if !a:0 || a:1 != 'raw'
-    let @s = '\V' . @s
-  endif
   let @s = temp
 endfunction
 
