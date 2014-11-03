@@ -6,7 +6,7 @@
 " search string, vim's search highlight will be wrong.  Refactor plz.
 function! VisualStarSearchSet(cmdtype,...)
   let temp = @"
-  norm! gvy
+  normal! gvy
   if !a:0 || a:1 != 'raw'
     let @" = escape(@", a:cmdtype.'\*')
   endif
