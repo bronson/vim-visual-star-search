@@ -5,16 +5,13 @@
 " TODO: there's a bug with raw mode.  since we're using @/ to return an unescaped
 " search string, vim's search highlight will be wrong.  Refactor plz.
 function! VisualStarSearchSet(cmdtype,...)
-  let temp = @s
-  norm! gv"sy
+  let temp = @"
+  norm! gvy
   if !a:0 || a:1 != 'raw'
-    let @s = escape(@s, a:cmdtype.'\*')
+    let @" = escape(@", a:cmdtype.'\*')
   endif
-  let @/ = substitute(@s, '\n', '\\n', 'g')
-  if !a:0 || a:1 != 'raw'
-    let @s = '\V' . @s
-  endif
-  let @s = temp
+  let @/ = substitute(@", '\n', '\\n', 'g')
+  let @" = temp
 endfunction
 
 " replace vim's built-in visual * and # behavior
