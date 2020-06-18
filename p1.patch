@@ -1,0 +1,31 @@
+diff --git a/plugin/visual-star-search.vim b/plugin/visual-star-search.vim
+index d3d841a..d676c02 100644
+--- a/plugin/visual-star-search.vim
++++ b/plugin/visual-star-search.vim
+@@ -13,6 +13,7 @@ function! VisualStarSearchSet(cmdtype,...)
+   let @/ = substitute(@", '\n', '\\n', 'g')
+   let @/ = substitute(@/, '\[', '\\[', 'g')
+   let @/ = substitute(@/, '\~', '\\~', 'g')
++  let @/ = substitute(@/, '\.', '\\.', 'g')
+   let @" = temp
+ endfunction
+ 
+diff --git a/test-patterns b/test-patterns
+index 890f637..dddeff9 100644
+--- a/test-patterns
++++ b/test-patterns
+@@ -12,6 +12,8 @@ don't
+ **
+ a[bc]d
+ g~re
++hello.
++helloo
+ 
+ don't
+ 'don't'
+@@ -21,3 +23,5 @@ don't
+ **
+ a[bc]d
+ g~re
++hello.
++helloo
