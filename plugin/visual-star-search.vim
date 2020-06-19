@@ -13,6 +13,7 @@ function! VisualStarSearchSet(cmdtype,...)
   let @/ = substitute(@", '\n', '\\n', 'g')
   let @/ = substitute(@/, '\[', '\\[', 'g')
   let @/ = substitute(@/, '\~', '\\~', 'g')
+  let @/ = substitute(@/, '\.', '\\.', 'g')
   let @" = temp
 endfunction
 
