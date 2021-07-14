@@ -24,6 +24,18 @@ visual-star-search to use Ag instead of vimgrep, add
 to your .vimrc.
 
 
+### Install
+
+Use a plugin manager such as [vim-plug](https://github.com/junegunn/vim-plug).
+
+Or install using the command line:
+
+```bash
+mkdir -p ~/.vim/pack/vendor/start
+git clone https://github.com/bronson/vim-visual-star-search ~/.vim/pack/vendor/start/visual-star-search
+```
+
+
 ### History
 
 It was originally derived from
