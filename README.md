@@ -25,9 +25,9 @@ to your .vimrc.
 
 ### Ripgrep
 
-If installed, Ripgrep is used instead of the default `vimgrep`. Internally, the `:Rg` command is used.
+If installed, Ripgrep is used instead of the default `vimgrep`.
 
-This can be exposed by i.e. [`fzf.vim`](https://github.com/junegunn/fzf.vim) or [`vim-ripgrep`](https://github.com/jremmen/vim-ripgrep).
+The `:Rg` command is used internally. That can be exposed by i.e. [`fzf.vim`](https://github.com/junegunn/fzf.vim) or [`vim-ripgrep`](https://github.com/jremmen/vim-ripgrep).
 
 ### Install
 
