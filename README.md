@@ -23,6 +23,11 @@ visual-star-search to use Ag instead of vimgrep, add
 [these two lines](https://github.com/bronson/dotfiles/blob/a3ab0d6ee8d9e5e7f6e12444753330bab0200b0e/.vimrc#L344-L345)
 to your .vimrc.
 
+### Ripgrep
+
+If installed, Ripgrep is used instead of the default `vimgrep`.
+
+The `:Rg` command is used internally. That can be exposed by i.e. [`fzf.vim`](https://github.com/junegunn/fzf.vim) or [`vim-ripgrep`](https://github.com/jremmen/vim-ripgrep).
 
 ### Install
 
